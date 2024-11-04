@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="row">
+    <div class="col-5 mx-auto">
+        <h3>Editar Produto</h3><hr>
+        <form method="post" action="{{url_for('edit_product', id=datas.ID)}}">
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" name="nome" required class="form-control" value="{{datas.NOME}}">
+            </div>
+            <div class="form-group">
+                <label>Preço</label>
+                <input type="text" name="preco" required class="form-control" value="{{datas.PRECO}}">
+            </div>
+            <div class="form-group">
+                <label>Quantidade</label>
+                <input type="text" name="quantidade" required class="form-control" value="{{datas.QUANTIDADE}}">
+            </div>
+            <input type="submit" value="Atualizar" class="btn btn-primary mt-3">
+        </form>
+    </div>
+</div>
+{% endblock %}
